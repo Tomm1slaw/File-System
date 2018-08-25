@@ -27,7 +27,7 @@ fs.readFile('./tekst.txt', 'utf-8', function(err, data) {
 
 fs.readdir('.', function(err, files) {
 	if (err) throw err;
-	fs.appendFile('./AllFiles.txt', files, function(err){
+	fs.writeFile('./AllFiles.txt', files, function(err){
 		if (err) throw err;
 		console.log('Zapisano!'.red);
 	});
